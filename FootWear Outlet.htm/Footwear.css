@@ -1,0 +1,76 @@
+body{
+    background-color:whitesmoke;
+}
+/*This is giving the background this smokey white color*/
+
+.cart{
+    float:right;
+}
+.Welcome{
+    text-align: center;
+}
+h1{
+    
+}
+nav h1{text-align:center;display:inline;padding-left:20px;padding-right:20px;margin:auto}
+
+/*This is the padding and centering of the sneaker boxes for all pages*/
+.s1 {
+    float: left; width:30%;padding:10px;border:2px black solid
+        
+}
+.s2 {
+    float: left; width:30%;padding:10px;border:2px black solid
+        
+}
+
+.s3 {
+    float: left; width:30%;padding:10px;border:2px black solid
+        
+}
+.s4 {
+    float: left; width:50%;padding:15px;border:6px black solid
+        
+}
+.s8{
+    float: left; width:50%;padding:15px;border:6px black solid
+        
+}
+/* this is giving to boxes specific widths and allowing for it to be accessablie on moblie device*/
+@media only screen and (max-width: 600px) {
+  image {
+    width:98%;height:200px;
+      
+  }
+    .s1 {
+    float: left; width:98%;padding:10px;border:2px black solid
+        
+}
+.s2 {
+    float: left; width:98%;padding:10px;border:2px black solid
+        
+}
+
+.s3 {
+    float: left; width:98%;padding:10px;border:2px black solid
+        
+}
+.s4 {
+    float: left; width:98%;padding:15px;border:6px black solid
+        
+}
+.s8{
+    float: left; width:98%;padding:15px;border:6px black solid
+        
+}
+}
+
+
+
+
+
+
+
+
+
+
