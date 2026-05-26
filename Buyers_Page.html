@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy — Footwear Outlet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Footwear.css">
+</head>
+<body>
+
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h2>YOUR BAG</h2><button class="close-cart" onclick="toggleCart()">✕</button></div>
+  <div class="cart-items" id="cartItems"><p class="empty-cart-msg">Nothing in the bag yet.</p></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>TOTAL</span><span id="cartTotal">$0</span></div>
+    <button class="checkout-btn">CHECKOUT</button>
+  </div>
+</aside>
+
+<nav class="navbar">
+  <div class="nav-logo"><a href="index.html" style="color:inherit;">KICKS<span>.</span>CO</a></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Buyers_Page.html" class="active">Buy</a>
+    <a href="Sellers_Page.html">Sell</a>
+  </div>
+  <button class="cart-btn" onclick="toggleCart()">
+    <span class="cart-dot" id="cartCount">0</span>BAG
+  </button>
+</nav>
+
+<section class="page-hero">
+  <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Exclusive Listing</span></div>
+  <h1>BUYER'S <span class="accent">PAGE.</span></h1>
+  <p>Only available through our buyer's portal. Authenticated. Ready to ship.</p>
+</section>
+
+<section class="products-section">
+  <div class="section-header">
+    <h2 class="section-title">EXCLUSIVE <span class="title-outline">LISTING</span></h2>
+  </div>
+
+  <div class="featured-item">
+    <div class="featured-img-wrap">
+      <img src="s7.png" alt="New Balance 550 Green">
+    </div>
+    <div class="featured-details">
+      <span class="card-brand">NEW BALANCE</span>
+      <h2 class="feat-name">New Balance 550</h2>
+      <p class="feat-desc">Fresh Green colorway. Premium leather upper with a cushioned sole. One of the cleanest 550s available right now. Every pair is 100% authenticated before shipping.</p>
+
+      <div class="feat-stats">
+        <div class="feat-stat">
+          <p class="feat-stat-label">Price Range</p>
+          <p class="feat-stat-val">$110–$170</p>
+        </div>
+        <div class="feat-stat">
+          <p class="feat-stat-label">Availability</p>
+          <p class="feat-stat-val">All Sizes</p>
+        </div>
+        <div class="feat-stat">
+          <p class="feat-stat-label">Condition</p>
+          <p class="feat-stat-val">Brand New</p>
+        </div>
+      </div>
+
+      <div class="size-picker">
+        <p class="size-label">Select Size</p>
+        <div class="size-grid">
+          <button class="size-btn" onclick="selectSize(this)">7</button>
+          <button class="size-btn" onclick="selectSize(this)">7.5</button>
+          <button class="size-btn" onclick="selectSize(this)">8</button>
+          <button class="size-btn" onclick="selectSize(this)">8.5</button>
+          <button class="size-btn" onclick="selectSize(this)">9</button>
+          <button class="size-btn" onclick="selectSize(this)">9.5</button>
+          <button class="size-btn" onclick="selectSize(this)">10</button>
+          <button class="size-btn" onclick="selectSize(this)">10.5</button>
+          <button class="size-btn" onclick="selectSize(this)">11</button>
+          <button class="size-btn" onclick="selectSize(this)">12</button>
+        </div>
+      </div>
+
+      <button class="btn-main btn-full" onclick="addToCart('New Balance 550 Green', 140)">ADD TO BAG</button>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">KICKS<span>.</span>CO</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="Buyers_Page.html">Buy</a>
+      <a href="Sellers_Page.html">Sell</a>
+    </div>
+    <p class="footer-copy">© 2025 Footwear Outlet. All kicks authenticated.</p>
+  </div>
+</footer>
+
+<script src="Footwear.js"></script>
+</body>
+</html>

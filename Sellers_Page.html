@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell — Footwear Outlet</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Footwear.css">
+</head>
+<body>
+
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<aside class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header"><h2>YOUR BAG</h2><button class="close-cart" onclick="toggleCart()">✕</button></div>
+  <div class="cart-items" id="cartItems"><p class="empty-cart-msg">Nothing in the bag yet.</p></div>
+  <div class="cart-footer">
+    <div class="cart-total"><span>TOTAL</span><span id="cartTotal">$0</span></div>
+    <button class="checkout-btn">CHECKOUT</button>
+  </div>
+</aside>
+
+<nav class="navbar">
+  <div class="nav-logo"><a href="index.html" style="color:inherit;">KICKS<span>.</span>CO</a></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Buyers_Page.html">Buy</a>
+    <a href="Sellers_Page.html" class="active">Sell</a>
+  </div>
+  <button class="cart-btn" onclick="toggleCart()">
+    <span class="cart-dot" id="cartCount">0</span>BAG
+  </button>
+</nav>
+
+<section class="page-hero">
+  <div class="eyebrow"><div class="eyebrow-line"></div><span class="eyebrow-text">Active Listing</span></div>
+  <h1>SELLER'S <span class="accent">PAGE.</span></h1>
+  <p>List your pair. Set your price. Place your bid. Make the deal.</p>
+</section>
+
+<section class="products-section">
+  <div class="section-header">
+    <h2 class="section-title">ACTIVE <span class="title-outline">LISTING</span></h2>
+  </div>
+
+  <div class="featured-item">
+    <div class="featured-img-wrap">
+      <img src="s8.png" alt="Air Jordan 1">
+    </div>
+    <div class="featured-details">
+      <span class="card-brand">JORDAN BRAND</span>
+      <h2 class="feat-name">Air Jordan 1</h2>
+      <p class="feat-desc">Top 3 / Fragment colorway — one of the most iconic Jordan 1s ever made. Seller listing — make your offer below or buy at the ask price. All sizes available.</p>
+
+      <div class="feat-stats">
+        <div class="feat-stat">
+          <p class="feat-stat-label">Ask Price</p>
+          <p class="feat-stat-val">$110–$300</p>
+        </div>
+        <div class="feat-stat">
+          <p class="feat-stat-label">Condition</p>
+          <p class="feat-stat-val">Brand New</p>
+        </div>
+        <div class="feat-stat">
+          <p class="feat-stat-label">Availability</p>
+          <p class="feat-stat-val">All Sizes</p>
+        </div>
+      </div>
+
+      <div class="bid-block">
+        <p class="size-label">Place Your Bid</p>
+        <div class="bid-row">
+          <span class="dollar">$</span>
+          <input type="number" id="counterbid" placeholder="Enter your offer..." min="1">
+          <button class="btn-main" onclick="Counterbid()">BID</button>
+        </div>
+        <div class="bid-result" id="bidResult" style="display:none;">
+          <div class="bid-result-inner">
+            <p class="bid-label-sm">Your Bid</p>
+            <p id="BID" class="bid-amount"></p>
+            <p class="bid-note">Bid submitted. Seller will respond within 24 hours.</p>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-main btn-full" onclick="addToCart('Air Jordan 1 Top 3', 205)">BUY NOW AT ASK</button>
+    </div>
+  </div>
+
+  <!-- LIST YOUR OWN -->
+  <div class="sell-form-block">
+    <div class="sell-form-header">
+      <h3>List Your Own Pair</h3>
+      <p>Submit your kicks for listing on the outlet. We review and post within 24 hours.</p>
+    </div>
+    <div class="sell-form">
+      <div class="form-row">
+        <input type="text" class="sell-input" placeholder="Shoe Name / Model">
+        <input type="text" class="sell-input" placeholder="Brand">
+      </div>
+      <div class="form-row">
+        <input type="number" class="sell-input" placeholder="Your Ask Price ($)">
+        <input type="text" class="sell-input" placeholder="Condition (New / Used)">
+      </div>
+      <textarea class="sell-input" rows="4" placeholder="Description — size, colorway, details..."></textarea>
+      <button class="btn-main btn-full" onclick="submitListing()">SUBMIT LISTING</button>
+      <p id="listingMsg" class="listing-success" style="display:none;">✓ Listing submitted! We'll review and post within 24hrs.</p>
+    </div>
+  </div>
+
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-logo">KICKS<span>.</span>CO</div>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="Buyers_Page.html">Buy</a>
+      <a href="Sellers_Page.html">Sell</a>
+    </div>
+    <p class="footer-copy">© 2025 Footwear Outlet. All kicks authenticated.</p>
+  </div>
+</footer>
+
+<script src="Footwear.js"></script>
+</body>
+</html>
